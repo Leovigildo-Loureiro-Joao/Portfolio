@@ -1,0 +1,147 @@
+@charset "UTF8";
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('font/roboto.ttf') format('truetype');
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --primary-color: #00C9C5;
+    --primary-color-hover: #00c9c69b;
+    --secondry-color:#FC5485;
+    --custom-color: #242752;
+    --text-color:#707070;
+    --font-size-title: 1.6rem;
+    --font-size-subtitle:1.4rem;
+    --font-size-bigSubtitle:1.9rem;
+    --font-size-prg:1.2rem;
+    --font-size-Bigprg:1.4rem;
+    --boder-radius-big:100%;
+    --boder-radius:8px;
+}
+
+p{
+    color: var(--text-color);
+    font-size: var(--font-size-prg);
+    letter-spacing: 2px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI','Roboto';
+    font-weight: normal;
+}
+
+
+/*-------------------------------------------------*/
+/*                  Header            */
+/*-------------------------------------------------*/
+
+header{
+    display: flex;
+    margin-left: 100px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li{
+    margin: 40px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav ul li span.select{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+header nav ul li span{
+    height:5px;
+    border-radius: var(--boder-radius);
+    background: var(--primary-color);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: var(--font-size-subtitle);
+    color: var(--custom-color);
+    transition: 0.3s;
+    padding: 0 5px;
+   
+
+}
+
+header nav ul li a:hover{
+    color: var(--secondry-color);
+    transition: 0.3s; 
+}
+
+img.img-bloco{
+    height: 60px;
+    max-width: 173px;
+    max-height: 120px;
+}
+
+
+/*-------------------------------------------------*/
+/*                  Home            */
+/*-------------------------------------------------*/
+
+#home{
+    display: flex;
+    justify-content: space-between;
+}
+
+#home #welcome{
+    margin-top: 110px;
+    margin-left: 100px;
+} 
+
+#home figure{
+    position: relative;
+    max-width: 1073;
+    width: 650px;
+    overflow: hidden;
+    top: -130px;
+}
+
+#home figure img{
+    width: 50vw;
+    top: -130px;
+    left: 50px;
+}
+
+#home #titulo{
+    font-size: var(--font-size-title);
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+#home #titulo span{
+    color: var(--primary-color);
+} 
+
+#home #welcome p{
+    font-size: var(--font-size-Bigprg);
+    line-height: 28px;
+} 
+
+.button-press{
+    background: var(--primary-color);
+    padding: 10px 40px;
+    border: none;
+    border-radius: var(--boder-radius);
+    margin: 20px 0;
+    color: white;
+}
