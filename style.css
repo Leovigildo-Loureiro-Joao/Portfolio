@@ -15,10 +15,9 @@ html{
     --secondry-color:#FC5485;
     --custom-color: #242752;
     --text-color:#707070;
-    --font-size-title: 1.6rem;
-    --font-size-subtitle:1.4rem;
-    --font-size-bigSubtitle:1.9rem;
-    --font-size-prg:1.2rem;
+    --font-size-title: 1.8rem;
+    --font-size-subtitle:1.5rem;
+    --font-size-bigTitle:1.9rem;
     --font-size-Bigprg:1.4rem;
     --boder-radius-big:100%;
     --boder-radius:8px;
@@ -48,18 +47,18 @@ header{
     margin-left: 100px;
 }
 
-header nav ul{
+nav ul{
     display: flex;
     list-style: none;
 }
 
-header nav ul li{
+nav ul li{
     margin: 40px 25px;
     display: flex;
     flex-direction: column;
 }
 
-header nav ul li span.select{
+header nav ul li.select span{
     opacity: 1;
     transition: 0.3s;
 }
@@ -69,10 +68,18 @@ header nav ul li span{
     border-radius: var(--boder-radius);
     background: var(--primary-color);
     transition: 0.3s;
-    opacity: 0;
+    width: 0;
 }
 
-header nav ul li a{
+header nav ul li:hover span{
+    height:5px;
+    border-radius: var(--boder-radius);
+    background: var(--secondry-color);
+    transition: 0.3s;
+    width: 100%;
+}
+
+ nav ul li a{
     text-decoration: none;
     font-size: var(--font-size-subtitle);
     color: var(--custom-color);
@@ -82,7 +89,7 @@ header nav ul li a{
 
 }
 
-header nav ul li a:hover{
+nav ul li a:hover{
     color: var(--secondry-color);
     transition: 0.3s; 
 }
@@ -93,6 +100,32 @@ img.img-bloco{
     max-height: 120px;
 }
 
+input[type=button] {
+    padding: 10px 40px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+div.section-title{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+div.section-title h1{
+   font-size: var(--font-size-title);
+   color: var(--primary-color);
+   padding: 10px 0;
+}
+
+div.section-title span{
+    height:5px;
+    border-radius: var(--boder-radius);
+    background: var(--primary-color);
+    transition: 0.3s;
+    width: 150px;
+}
 
 /*-------------------------------------------------*/
 /*                  Home            */
@@ -105,7 +138,7 @@ img.img-bloco{
 
 #home #welcome{
     margin-top: 110px;
-    margin-left: 100px;
+    margin-left: 7.5vw;
 } 
 
 #home figure{
@@ -123,7 +156,7 @@ img.img-bloco{
 }
 
 #home #titulo{
-    font-size: var(--font-size-title);
+    font-size: var(--font-size-bigTitle);
     font-weight: normal;
     margin-bottom: 40px;
 }
@@ -131,6 +164,11 @@ img.img-bloco{
 #home #titulo span{
     color: var(--primary-color);
 } 
+
+#home #titulo h1{
+    color: var(--text-color);
+} 
+
 
 #home #welcome p{
     font-size: var(--font-size-Bigprg);
@@ -140,8 +178,482 @@ img.img-bloco{
 .button-press{
     background: var(--primary-color);
     padding: 10px 40px;
-    border: none;
     border-radius: var(--boder-radius);
     margin: 20px 0;
+    transition: 0.3s;
+}
+
+.button-press:hover{
+    background: var(--primary-color-hover);
+    transition: 0.3s;
+}
+
+
+/*-------------------------------------------------*/
+/*                  Projecto            */
+/*-------------------------------------------------*/
+
+#projecto{
+    display: flex;
+    flex-direction: column;   
+    padding: 2vw 7.5vw;
+}
+
+#projecto .section-title{
+    margin-top: -50px;
+    position: relative;
+    top: -50px;
+}
+
+.fundo-img .fundo{
+    background-color: #F7F7F7; /* cor de fundo cinza */
+  transform: skewY(-9deg); /* inclina a div */
+  padding: 400px 0;
+  width: 80.5vw;
+  margin: -640px 0 0 -7.5vw;
+  position: relative;
+}
+
+
+
+.fundo-img .fundo-p{
+    background-color: #F7F7F7; /* cor de fundo cinza */
+    height: 800px;
+    width: 18vw;
+    margin: -815px -7.5vw 0 0;
+    transform: translateX(73.1vw) skewY(32deg);
+}
+
+#grid-project{
+    display: flex;
+    grid-gap:2.5vw;
+}
+
+#grid{
+    width: 83vw;
+    overflow-x: hidden;
+}
+
+#block-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    margin: 0px -3.75vw;
+}
+
+#block-project input{
+   margin: 20px;
+}
+
+#projecto .card-project{
+   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: var(--boder-radius);
+   padding: 30px;
+   background: white;
+   width: 26vw;
+}
+ 
+
+#projecto .card-project .face{
+    width: 90%;
+    max-width: 261px;
+    height: 202px;
+ }
+  
+#projecto .card-project .title-project{
+    color: var(--text-color);
+    font-weight: bolder;
+    font-size: var(--font-size-subtitle);
+    margin-top: 30px;
+}
+
+#projecto .card-project h3{
+    font-size: var(--font-size-Bigprg);
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+#projecto .card-project .tecno{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projecto .card-project .tecno div{
+    display: flex;
+    height: 38px;
+    justify-content: space-around;
+    width: 17vw;
+    margin-top: 10px;
+}
+
+#projecto .card-project .tecno div img{
+    height: 36px;
+    width: 36px;
+}
+
+#projecto .card-project .buttons{
+    width: 26vw;
+    margin: 20px -30px -30px;
+    display: flex;
+}
+
+#projecto .card-project .buttons input{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+}
+
+#projecto .card-project .buttons input:first-child{
+   background: var(--primary-color);
+   border-bottom-left-radius: 8px;
+   transition: 0.3s;
+}
+
+#projecto .card-project .buttons input:first-child:hover{
+    background: var(--primary-color-hover);
+    transition: 0.3s;
+ }
+
+#projecto .card-project .buttons input:last-child{
+    color: var(--primary-color);
+    background: white;
+    border: 1px solid var(--primary-color);
+    border-bottom-right-radius: 8px;
+ }
+
+ #projecto .card-project .buttons input:last-child:hover{
+    background: var(--primary-color-hover);
+    transition: 0.3s;
     color: white;
+ }
+
+
+ /*----------------------------------------------------*/
+/*                        Quem Sou*/
+ /*----------------------------------------------------*/
+
+ #quemSou{
+    padding: 2vw 7.5vw;
+    display: flex;
+    flex-direction: column;
+ }
+
+ #quemSou #block-left{
+    float: left;
+    position: relative;
+    left: 86%;
+    width: 100px;
+ }
+
+ #quemSou #my-data{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #quemSou #gif-animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #quemSou #gif-animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 799px;
+    max-height: 597px;
+    width: 100%;
+    height: 100%;
+    margin-left: -7.5vw;
+ }
+
+ 
+ #quemSou #gif-animation img:first-child{
+   position: relative;
+   transform: translateX(47.5%);
+   z-index: 10;
+   height: 100%;
+    width: 100%;
+    max-width: 799px;
+    max-height: 597px;
+
+ }
+
+ #quemSou #gif-animation img:last-child{
+    position: relative;
+    transform: translateX(-53%);
+    height: 100%;
+    width: 99%;
+    max-width: 796px;
+    max-height: 594px;
+
+}
+
+
+#quemSou #my-data .data{
+    display: flex;
+    flex-direction: column;
+    margin: 2vw 2vw;
+}
+
+
+#quemSou #my-data .data .title{
+    display: flex;
+    align-items: center;
+}
+
+#quemSou #my-data .data .title h2{
+   margin: 20px 2vw;
+   font-weight: bolder;
+   color: var(--custom-color);
+   font-size: var(--font-size-title);
+} 
+
+#quemSou #my-data .data p{
+    font-size: var(--font-size-Bigprg);
+    margin-left: 5vw;
+    line-height: 30px;
+ } 
+ 
+
+ #quemSou #my-data .data:first-child,#quemSou #my-data .data:last-child{
+    margin-left: 8vw;
+ } 
+ 
+
+#quemSou .anime{
+    background: url(img/Elipse\ 38.png) no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    display: flex;
+    justify-content: center;
+    transform: rotateY('180');
+    align-items: center;
+    animation: girar 1.5s infinite steps(500); 
+}
+
+#quemSou .anime div {
+    background: url(img/Elipse\ 37.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    z-index: 10;
+    animation: girarP 1s infinite steps(500) ;
+   
+}
+
+  @keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+  }
+
+  @keyframes girarP {
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+  }
+
+   /*----------------------------------------------------*/
+/*                        Habilidades*/
+ /*----------------------------------------------------*/
+
+ #habilidades{
+    padding: 0vw 7.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ #habilidades #habil{
+    display: flex;
+    align-items: center;
+    margin: 0 2vw;
+ }
+
+ #habilidades #habil-elements{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+ }
+
+ #habilidades .habil-data{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: #00C9C5 5px solid;
+    width: 100%;
+    max-width: 22vw;
+    padding-left: 30px;
+    margin: 20px;
+    opacity: 0.3;
+    transition: 0.3s;
+ }
+
+ #habilidades .habil-data .habil-img{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+ }
+
+ #habilidades .habil-data .habil-img div{
+    padding: 30px;
+    background: url(img/Elipse40.png) no-repeat center;
+    background-size: 50px;
+    animation: girar 1s infinite steps(500);
+ }
+
+ #habilidades .habil-data .habil-img img{
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    height: 90%;
+    max-width: 76px;
+    max-height: 76px;
+    transform: translateX(-52px) translateY(-1px); 
+ }
+
+ #habilidades .habil-data .habil-text{
+    width: 40vw;
+ }
+
+
+ #habilidades .habil-data .habil-text h1{
+    font-weight: bolder;
+    color: var(--custom-color);
+    transition: 0.3s;
+ }
+
+ #habilidades .habil-data .habil-text h2{
+    color: var(--primary-color);
+    transition: 0.3s;
+ }
+
+ #habilidades #habil input{
+    width: 15px;
+    height: 25px;
+    margin: 20px 0;
+ }
+
+ #habilidades #habil input:first-child{
+    margin-left: -30px;
+ }
+
+ #habilidades #habil input:last-child{
+    margin-right: -30px;
+ }
+
+
+ #habilidades .habil-data.select{
+    opacity: 1;
+    transition: 0.3s;
+ }
+ 
+
+ #habilidades .habil-data.select{
+    border-bottom: var(--secondry-color)5px solid;
+    transition: 0.3s;
+ }
+
+ #habilidades .habil-data.select .habil-text h2{
+    color: var(--secondry-color);
+    transition: 0.3s;
+ }
+
+ #habilidades .habil-data.select .habil-img div{
+    padding: 30px;
+    background: url(img/Elipse\ 40.png) no-repeat center;
+    background-size: 50px;
+    transition: 0.3s;
+
+ }
+
+ #habilidades #babilBlock{
+    width: 90vw;
+    overflow-x: hidden;
+ }
+
+ /*---------------------------------*/
+/*               Footer*/
+ /*---------------------------------*/
+ #links{
+    display: flex;
+    flex-direction: column;
+    width: 38vw;
+    padding: 0;
+    float: right;
+ }
+
+ #links p{
+    margin: 10px 25px;
+    font-size: var(--font-size-prg);
+    font-weight: bold;
+    color: var(--primary-color);
+ }
+
+ #links h2{
+    color: var(--secondry-color);
+    margin: 10px 25px;
+    
+ }
+
+ #links nav ul li {
+    margin: 10px 25px;
+}
+
+#links nav ul li a{
+    font-size: var(--font-size-Bigprg);
+    font-weight: bold;
+    padding: 0;
+}
+
+
+#foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin-left: 7.5vw;
+    padding-top: 50px;
+    
+}
+
+#foot p{
+    margin: 20px;
+}
+
+#foot img{
+    margin: 0 10px 50px;
+    width: 30px;
+}
+
+footer .fundo-img{
+    transform: translateY(850px);
+    margin-left: 7.5vw;
+    z-index: -1;
+    position: relative;
+}
+
+footer{
+    overflow-y: hidden;
+    height: 500px;
 }
